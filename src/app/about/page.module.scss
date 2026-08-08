@@ -1,0 +1,96 @@
+.about {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  margin-bottom: var(--space-2);
+}
+
+.introRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.avatarWrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-accent);
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+.resumeLink {
+  display: inline-block;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.resumeLink:hover {
+  border-color: var(--color-accent);
+}
+
+.subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.paragraph {
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin-bottom: var(--space-3);
+}
+
+.educationCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+.educationHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.school {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.degree {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+
+.year {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.cgpa {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}

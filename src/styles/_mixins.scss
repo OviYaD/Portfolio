@@ -1,0 +1,36 @@
+@use 'breakpoints' as bp;
+
+@mixin flex-center($gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+@mixin respond-below($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Lifted card on hover — used by every "card" surface (project cards,
+// github/live-project cards) so the interaction feels consistent site-wide.
+@mixin hover-lift($distance: 3px, $shadow: 0 12px 30px rgba(0, 0, 0, 0.12)) {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-#{$distance});
+    box-shadow: $shadow;
+  }
+}
+
+@mixin pill-chip {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-pill);
+  padding: 2px 10px;
+}

@@ -1,0 +1,42 @@
+.contact {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  color: var(--color-muted);
+  margin-bottom: var(--space-5);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.link {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.link:hover {
+  border-color: var(--color-accent);
+}
+
+.location {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  margin-top: var(--space-5);
+}

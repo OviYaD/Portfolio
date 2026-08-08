@@ -1,0 +1,39 @@
+.title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4) 0;
+}
+
+.subtitle {
+  color: var(--color-muted);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-4) 0;
+  margin-bottom: var(--space-2);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.sectionSubtitle {
+  color: var(--color-muted);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  margin-bottom: var(--space-3);
+  font-size: 0.95rem;
+}
+
+.sectionInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4) var(--space-6);
+}

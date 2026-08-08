@@ -1,0 +1,119 @@
+@use '../../../styles/mixins' as mix;
+@use '../../../styles/breakpoints' as bp;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4);
+
+  @include mix.respond-below(bp.$bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mix.respond-below(bp.$bp-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  @include mix.hover-lift(4px, 0 14px 32px rgba(28, 27, 25, 0.12));
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 270px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-4);
+  text-decoration: none;
+  color: var(--color-text);
+
+  &:hover {
+    border-color: var(--color-accent);
+
+    .arrow {
+      transform: translate(3px, -3px);
+    }
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.index {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+}
+
+.arrow {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.summary {
+  flex: 1;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-bottom: var(--space-3);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// Ticket-style perforation divider — echoes the swing-tag motif from the Hero.
+.divider {
+  position: relative;
+  height: 0;
+  border-top: 1px dashed var(--color-border);
+  margin: 0 calc(var(--space-4) * -1) var(--space-3);
+}
+
+.notch {
+  position: absolute;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  transform: translateY(-50%);
+
+  &[data-side='left'] {
+    left: -7px;
+  }
+
+  &[data-side='right'] {
+    right: -7px;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag {
+  @include mix.pill-chip;
+}

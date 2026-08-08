@@ -1,0 +1,50 @@
+:root {
+  /* Colors — swing-tag palette: warm paper, ink, teal + a coral stamp accent */
+  --color-bg: #faf6ef;
+  --color-surface: #ffffff;
+  --color-text: #1c1b19;
+  --color-accent: #01afb5;
+  --color-accent-2: #ff6b4a; /* stamp / sale-tag coral, used sparingly */
+  --color-muted: #746e60;
+  --color-border: #e6ddcc;
+
+  /* Typography */
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 64px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+
+  /* Elevation */
+  --shadow-card: 0 2px 14px rgba(28, 27, 25, 0.06);
+  --shadow-tag: 0 24px 48px rgba(28, 27, 25, 0.14);
+  --color-bg-translucent: rgba(250, 246, 239, 0.85);
+
+  /* Layout */
+  --max-width: 1200px;
+}
+
+[data-theme='dark'] {
+  --color-bg: #17160f;
+  --color-surface: #201e17;
+  --color-text: #f3ede1;
+  --color-accent: #1fc9cf;
+  --color-accent-2: #ff8265;
+  --color-muted: #a89e8b;
+  --color-border: #35322a;
+
+  --shadow-card: 0 2px 14px rgba(0, 0, 0, 0.35);
+  --shadow-tag: 0 24px 48px rgba(0, 0, 0, 0.5);
+  --color-bg-translucent: rgba(23, 22, 15, 0.85);
+}
